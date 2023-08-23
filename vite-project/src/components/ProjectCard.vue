@@ -4,7 +4,10 @@
         <h3>{{project.name}}</h3>
         <p>{{ project.description }}</p>
 
+        <button>show details</button>
     </div>
+
+    
 
 </template>
 

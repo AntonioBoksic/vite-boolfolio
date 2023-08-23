@@ -7,7 +7,10 @@
   :project="project"
 
   class="col-3 my-2"
+
+  @click="toProjectShow(project.id)"
   />
+  
 </div>
 
 </template>
@@ -29,7 +32,14 @@ export default {
       projects: []
     }
   },
+  methods: {
 
+    toProjectShow(id){
+    this.$router.push("/projects/" + id)
+
+  },
+  },
+  
   mounted() {
     axios.get("http://127.0.0.1:8000/api/v1/projects")
     .then(response => {
