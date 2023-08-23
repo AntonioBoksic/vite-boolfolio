@@ -1,14 +1,18 @@
 <template>
 
-    <h1>Project SHOW</h1>
+    <div v-if="project">
+        <h1>Project SHOW</h1>
 
-    <h2>Project {{ project.name }}</h2>
-    <p>{{ project.description }}</p>
-    <div class="row">
-    <span class="col">device: {{ project.device }}</span>
-    <span class="col">programming language: {{ project.programming_language }}</span>
-    <span class="col">type: {{ project.type.name }}</span>
-    <span class="col">technologies: {{ project.technologies.name }}</span>
+        <h2>Project {{ project.name }}</h2>
+        <p>{{ project.description }}</p>
+        <div class="row">
+        <span class="col">device: {{ project.device }}</span>
+        <span class="col">programming language: {{ project.programming_language }}</span>
+        <span class="col">type: {{ project.type.name }}</span>
+        <span class="col">technologies: {{ project.technologies.name }}</span>
+        
+    </div>
+    
 
 
 
@@ -25,7 +29,7 @@ export default {
     name: 'ProjectShow',
     data() {
         return {
-            project: {}
+            project: null
         }
     },
     mounted() {
