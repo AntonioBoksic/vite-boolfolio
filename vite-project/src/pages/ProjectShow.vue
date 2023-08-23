@@ -9,7 +9,17 @@
         <span class="col">device: {{ project.device }}</span>
         <span class="col">programming language: {{ project.programming_language }}</span>
         <span class="col">type: {{ project.type.name }}</span>
-        <span class="col">technologies: {{ project.technologies.name }}</span>
+        <h4>technologies:</h4>
+            <ul>
+                <li v-for="technology in project.technologies"
+                :key="technology.id"
+                >
+                {{ technology.name }}
+                </li>
+
+            </ul>
+            
+        
         
     </div>
     
