@@ -1,5 +1,5 @@
 <template>
-  <h1>Projects</h1>
+  <HeaderComp/>
 
   <!-- <AppHome/> -->
   
@@ -7,14 +7,16 @@
 
 </template>
 
-<!-- <script>
- import AppHome from './pages/AppHome.vue';
+<script>
+ //import AppHome from './pages/AppHome.vue';
+ import HeaderComp from './components/HeaderComp.vue';
 
  export default {
   name : 'App',
   components : {
-    AppHome
+    //AppHome
+    HeaderComp
   },
  }
-</script> -->
+</script>
 
