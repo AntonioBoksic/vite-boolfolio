@@ -1,5 +1,5 @@
 <template>
-<div v-if="project">
+
     <h1>Project SHOW</h1>
 
     <h2>Project {{ project.name }}</h2>
@@ -7,8 +7,11 @@
     <div class="row">
     <span class="col">device: {{ project.device }}</span>
     <span class="col">programming language: {{ project.programming_language }}</span>
+    <span class="col">type: {{ project.type }}</span>
+    <span class="col">technologies: {{ project.technologies }}</span>
 
-</div>
+
+
 
 </div>
 
@@ -22,7 +25,7 @@ export default {
     name: 'ProjectShow',
     data() {
         return {
-            project: null
+            project: {}
         }
     },
     mounted() {
