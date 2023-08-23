@@ -1,56 +1,20 @@
 <template>
   <h1>Projects</h1>
 
-  <div class="row justify-content-between">
-    <ProjectCard
-    v-for="project in projects"
-    :key="project.id"
-    :project="project"
+  <!-- <AppHome/> -->
+  
+  <router-view/>
 
-    class="col-3 my-2"
-    />
-  </div>
 </template>
 
-<script>
-// import HelloWorld from './components/HelloWorld.vue'
-import ProjectCard from './components/ProjectCard.vue'
-import axios from 'axios';
+<!-- <script>
+ import AppHome from './pages/AppHome.vue';
 
-export default {
-  name: 'app',
-
-  components: {
-    ProjectCard
+ export default {
+  name : 'App',
+  components : {
+    AppHome
   },
+ }
+</script> -->
 
-  data() {
-    return {
-      projects: []
-    }
-  },
-
-  mounted() {
-    axios.get("http://127.0.0.1:8000/api/v1/projects")
-    .then(response => {
-
-      console.log(response.data.projects)
-
-      this.projects = response.data.projects
-    })
-    .catch(error => {
-      console.log(error)
-    })
-  }
-
-
-}
-</script>
-
-
-
-<style scoped>
-
-
-
-</style>
