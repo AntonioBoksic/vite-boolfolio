@@ -7,8 +7,8 @@
     <div class="row">
     <span class="col">device: {{ project.device }}</span>
     <span class="col">programming language: {{ project.programming_language }}</span>
-    <span class="col">type: {{ project.type }}</span>
-    <span class="col">technologies: {{ project.technologies }}</span>
+    <span class="col">type: {{ project.type.name }}</span>
+    <span class="col">technologies: {{ project.technologies.name }}</span>
 
 
 
